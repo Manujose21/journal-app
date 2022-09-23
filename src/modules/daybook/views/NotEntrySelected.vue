@@ -3,7 +3,7 @@
     <h1 class="">No hay nada seleccionado</h1>
   </div>
 
-  <Fab />
+  <Fab @fab-button="fabAction"/>
 </template>
 
 <script>
@@ -12,7 +12,12 @@
     
     components:{
       Fab : defineAsyncComponent(() => import("../components/FabButton.vue"))
-    }
+    },
+    methods: {
+      fabAction(){
+        this.$router.push({ name:"entry-view", params:{ entry: "new" } })
+      }
+    },
   }
 </script>
 

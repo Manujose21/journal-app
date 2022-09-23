@@ -1,5 +1,7 @@
 <template>
-  <button class="btn btn-primary">
+  <button class="btn btn-primary"
+  @click="action"
+  >
     <i class="fa " 
       :class="icon"
     ></i>
@@ -13,7 +15,12 @@
         type: String,
         default : "fa-plus"
       }
-    }
+    },
+    methods: {
+      action(){
+        this.$emit("fab-button")
+      }
+    },
   }
 </script>
 
