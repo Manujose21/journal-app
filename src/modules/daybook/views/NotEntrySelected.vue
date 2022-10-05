@@ -10,6 +10,7 @@
   import { defineAsyncComponent } from 'vue'
   export default {
     
+    name: 'NotEntrySelected',
     components:{
       Fab : defineAsyncComponent(() => import("../components/FabButton.vue"))
     },

@@ -36,7 +36,7 @@
   import { alertSucces, alertAction } from '@/helpers/sweetAlert'
   // import postImage from '@/modules/daybook/helpers/postImage'
   export default {
-
+    name:'EntryView',
     props:{
       id:{
         type: String,

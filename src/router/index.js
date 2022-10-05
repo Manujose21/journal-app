@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import daybookLayaout from '@/modules/daybook/router'
+import authLayout from '@/modules/auth/router'
+import isAuthenticationGuard from './authGuard'
 const routes = [
 
   {
@@ -20,7 +22,12 @@ const routes = [
 
   {
     path: '/daybook',
+    beforeEnter: [ isAuthenticationGuard ],
     ...daybookLayaout
+  },
+  {
+    path: '/auth',
+    ...authLayout
   }
 
 ]
